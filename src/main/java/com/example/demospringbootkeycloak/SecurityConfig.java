@@ -36,6 +36,13 @@ public class SecurityConfig {
         this.keycloakLogoutHandler = keycloakLogoutHandler;
     }
 
+    /**
+     * 我们通过创建一个SecurityFilterChain bean来配置HttpSecurity。
+     * 此外，我们还需要使用http.oauth2Login()来启用OAuth2登录。
+     * @param httpSecurity
+     * @return
+     * @throws Exception
+     */
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 
